@@ -1,0 +1,19 @@
+.banner_title {
+  font-family: "Simplon Norm", "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 72px;
+  color: #252020;
+}
+
+.banner_description {
+  font-family: "Simplon Norm", "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 40px;
+  text-align: center;
+  color: #252020;
+  padding-bottom: 80px;
+}

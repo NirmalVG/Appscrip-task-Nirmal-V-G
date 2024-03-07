@@ -1,0 +1,41 @@
+.side {
+  float: left;
+}
+
+.unselected {
+  font-family: "Simplon Norm";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration-line: underline;
+  color: #bfc8cd;
+}
+
+.all {
+  font-family: "Simplon Norm";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #252020;
+}
+
+.filter_head {
+  font-family: "Simplon Norm";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #252020;
+}
+
+.gender_type {
+  font-family: "Simplon Norm";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #252020;
+}

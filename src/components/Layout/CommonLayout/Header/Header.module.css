@@ -1,0 +1,8 @@
+.header_name {
+  font-weight: bolder;
+}
+
+.header_link {
+  text-decoration: none !important;
+  color: black;
+}

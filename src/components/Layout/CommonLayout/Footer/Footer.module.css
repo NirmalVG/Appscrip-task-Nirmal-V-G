@@ -1,0 +1,21 @@
+.footer {
+  background-color: black;
+}
+
+.newsletter_title {
+  font-family: "Simplon Norm";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.newsletter_description {
+  font-family: "Simplon Norm";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+}
