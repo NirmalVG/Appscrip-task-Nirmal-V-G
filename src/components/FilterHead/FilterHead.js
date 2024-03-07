@@ -28,7 +28,7 @@ const options = [
   },
 ];
 
-const FilterHead = () => {
+const FilterHead = ({showFilter}) => {
   return (
     <div className="pe-5 ps-5">
       <Row className="pt-2 pb-2">
@@ -40,7 +40,7 @@ const FilterHead = () => {
             <IoIosArrowBack />
           </div>
           <div clasName={styles.side}>
-            <p>HIDE FILTER</p>
+            <button onClick={showFilter}>HIDE FILTER</button>
           </div>
         </Col>
         <Col xs={2} sm={2} md={2} lg={2}>
