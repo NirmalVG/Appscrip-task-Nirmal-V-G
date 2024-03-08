@@ -1,15 +1,18 @@
+"use client"
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import styles from "./Footer.module.css";
 import { TiSocialLinkedinCircular } from "react-icons/ti";
 import { FaInstagram } from "react-icons/fa";
+import { useDimension } from "@/logic/useDimension";
 
 const Footer = () => {
+  const { width } = useDimension();
   return (
     <footer>
       <Container fluid className={`pe-5 ps-5 ${styles.footer}`}>
         <Row>
-          <Col xs={6} sm={6} md={6} lg={6}>
+          <Col md={12} lg={6}>
             <div className={styles.newsletter_section}>
               <p className={styles.newsletter_title}>BE THE FIRST TO KNOW</p>
               <p className={styles.newsletter_description}>
@@ -26,13 +29,13 @@ const Footer = () => {
               />
               <Button
                 variant="secondary"
-                className={`${styles.subscribe_btn} pe-2`}
+                className={`${styles.subscribe_btn} pe-2 ${width <= 992 && "mb-5"}`}
               >
                 Subscribe
               </Button>
             </div>
           </Col>
-          <Col xs={6} sm={6} md={6} lg={6}>
+          <Col md={12} lg={6}>
             <div>
               <p className={styles.newsletter_title}>CONTACT US</p>
               <p className="text-white">+44 221 133 5360</p>

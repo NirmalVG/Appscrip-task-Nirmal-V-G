@@ -29,7 +29,7 @@ const options = [
   },
 ];
 
-const FilterHead = ({ showFilter, show, props }) => {
+const FilterHead = ({ showFilter, show, props, handleFilter }) => {
   const style = {
     control: (base) => ({
       ...base,
@@ -40,10 +40,10 @@ const FilterHead = ({ showFilter, show, props }) => {
   return (
     <div className="pe-5 ps-5">
       <Row className="pt-2 pb-2">
-        <Col xs={2} sm={2} md={2} lg={2}>
+        <Col md={4} lg={2}>
           <p className={styles.filter_count}>{props?.length} ITEMS</p>
         </Col>
-        <Col xs={8} sm={8} md={8} lg={8}>
+        <Col md={4} lg={8}>
           <div className={`${styles.side} pe-2`}>
             {show ? <IoIosArrowBack /> : <IoIosArrowForward />}
           </div>
@@ -53,7 +53,7 @@ const FilterHead = ({ showFilter, show, props }) => {
             </button>
           </div>
         </Col>
-        <Col xs={2} sm={2} md={2} lg={2}>
+        <Col  md={4} lg={2}>
           <Select
             className={styles.select_option}
             classNamePrefix="select"
@@ -62,6 +62,7 @@ const FilterHead = ({ showFilter, show, props }) => {
               IndicatorSeparator: () => null,
             }}
             name="color"
+            onChange={handleFilter}
             isSearchable={false}
             options={options}
             styles={style}
