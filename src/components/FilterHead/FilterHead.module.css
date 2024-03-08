@@ -1,9 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 .side {
   float: left;
 }
 
 .filter_count {
-  font-family: "Simplon Norm";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -12,7 +14,9 @@
   color: #252020;
 }
 
-.hide_filter {
+.filter_button {
+  border: none;
+  background-color: white;
   font-family: "Adobe Caslon Pro";
   font-style: normal;
   font-weight: 400;
@@ -20,4 +24,8 @@
   text-align: right;
   text-decoration-line: underline;
   color: #888792;
+}
+
+.select_option {
+  border: none;
 }

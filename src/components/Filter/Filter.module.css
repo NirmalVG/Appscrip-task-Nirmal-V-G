@@ -3,7 +3,7 @@
 }
 
 .unselected {
-  font-family: "Simplon Norm";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -13,7 +13,7 @@
 }
 
 .all {
-  font-family: "Simplon Norm";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -22,7 +22,7 @@
 }
 
 .filter_head {
-  font-family: "Simplon Norm";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -32,10 +32,20 @@
 }
 
 .gender_type {
-  font-family: "Simplon Norm";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
+  color: #252020;
+}
+
+.accordion_title {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
   color: #252020;
 }

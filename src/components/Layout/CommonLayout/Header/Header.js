@@ -9,70 +9,85 @@ import { CiSearch } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
 import { IoBagHandleOutline } from "react-icons/io5";
 import { IoPersonOutline } from "react-icons/io5";
+import { useDimension } from "@/logic/useDimension";
 
 const Header = () => {
+  const { width } = useDimension();
   return (
     <div>
-      <Navbar expand="lg" className="bg-white">
-        <Container fluid className="pe-5 ps-5">
+      <Navbar expand="lg" className={`bg-white`}>
+        <Container
+          fluid
+          className={`${width >= 992 && "pe-5 ps-5"} position-relative`}
+        >
           <Navbar.Brand>
             <Link href="/">
-              <Image src={logoImg} height={30} width={30} alt="logo" />
+              <Image src={logoImg} height={50} width={50} alt="logo" />
             </Link>
           </Navbar.Brand>
-          <h2 className={`${styles.header_name} justify-content-between`}>
-            Logo
-          </h2>
+          <div className={styles.logo_head}>
+            <h2 className={`${styles.header_name}`}>LOGO</h2>
+          </div>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto">
-              <Nav.Link>
-                <CiSearch />
-              </Nav.Link>
-              <Nav.Link>
-                <CiHeart />
-              </Nav.Link>
-              <Nav.Link>
-                <IoBagHandleOutline />
-              </Nav.Link>
-              <Nav.Link>
-                <IoPersonOutline />
-              </Nav.Link>
-              {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Something
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
-              </NavDropdown> */}
-            </Nav>
+            {width >= 992 && (
+              <Nav className="ms-auto">
+                <Nav.Link>
+                  <CiSearch size={30} />
+                </Nav.Link>
+                <Nav.Link>
+                  <CiHeart size={30} />
+                </Nav.Link>
+                <Nav.Link>
+                  <IoBagHandleOutline size={30} />
+                </Nav.Link>
+                <Nav.Link>
+                  <IoPersonOutline size={30} />
+                </Nav.Link>
+              </Nav>
+            )}
+            {width <= 992 && (
+              <Nav>
+                <Nav.Item>
+                  <Nav.Link className={styles.header_link}>SHOP</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link className={styles.header_link}>SKILLS</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link className={styles.header_link}>STORIES</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link className={styles.header_link}>ABOUT</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link className={styles.header_link}>CONTACT US</Nav.Link>
+                </Nav.Item>
+              </Nav>
+            )}
           </Navbar.Collapse>
         </Container>
       </Navbar>
-
-      <Nav className="flex justify-content-center">
-        <Nav.Item>
-          <Nav.Link className={styles.header_link}>SHOP</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link className={styles.header_link}>SKILLS</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link className={styles.header_link}>STORIES</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link className={styles.header_link}>ABOUT</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link className={styles.header_link}>CONTACT US</Nav.Link>
-        </Nav.Item>
-      </Nav>
+      {width >= 992 && (
+        <Nav className="d-flex justify-content-center">
+          <Nav.Item>
+            <Nav.Link className={styles.header_link}>SHOP</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link className={styles.header_link}>SKILLS</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link className={styles.header_link}>STORIES</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link className={styles.header_link}>ABOUT</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link className={styles.header_link}>CONTACT US</Nav.Link>
+          </Nav.Item>
+        </Nav>
+      )}
+      <hr />
     </div>
   );
 };
