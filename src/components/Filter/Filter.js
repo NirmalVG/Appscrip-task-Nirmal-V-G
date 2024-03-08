@@ -27,7 +27,7 @@ const Filter = ({ unselectAll, selectedItems, toggleSelection }) => {
             <Accordion defaultActiveKey="0">
                 {filterTitle.map((filter, index) => {
                     return (
-                        <Accordion.Item eventKey={index}>
+                        <Accordion.Item eventKey={index} key={index}>
                             <Accordion.Header
                                 className={`${styles.filter_head}${styles.accordion}`}
                             >
