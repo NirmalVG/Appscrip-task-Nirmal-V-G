@@ -4,7 +4,6 @@ import { Card, Row, Col } from "react-bootstrap";
 import styles from "./Products.module.css";
 
 const Products = ({ props, show }) => {
-  console.log(props, "props");
   return (
     <Row>
       {props?.map((products, index) => {
