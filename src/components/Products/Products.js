@@ -11,7 +11,7 @@ const Products = ({ props, show, mainItem, filteredData }) => {
                     <Col
                 
                         md={show ? 4 : 6}
-                        lg={show ? 4 : 6}
+                        lg={show ? 4 : 3}
                         key={index}
                         className="pb-5"
                     >
